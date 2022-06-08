@@ -15,6 +15,8 @@ class ReviewApplicationTests {
     private ReviewController reviewcontroller;
     @Autowired
     private ReviewRepo repo;
+    @Autowired
+    private ReviewService reviewService;
 
     @Test
     void contextLoads() throws Exception{
@@ -25,5 +27,11 @@ class ReviewApplicationTests {
         this.repo.save(new Review(1, "test", "testing"));
         assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
     }
+    @Test
+    void getReviews(){
+        this.repo.findAll();
+        assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
+    }
+
 
 }

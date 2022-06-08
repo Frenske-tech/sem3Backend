@@ -22,4 +22,9 @@ public class ReviewServiceImpl implements ReviewService{
     public List<Review> getAllReviews() {
         return reviewRepo.findAll();
     }
+
+    @Override
+    public void deleteReview(int id) {
+        reviewRepo.deleteById(id);
+    }
 }

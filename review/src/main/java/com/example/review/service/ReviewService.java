@@ -9,4 +9,6 @@ import java.util.List;
 public interface ReviewService {
     public Review saveReview(Review review);
     public List<Review> getAllReviews();
+
+    void deleteReview(int id);
 }
