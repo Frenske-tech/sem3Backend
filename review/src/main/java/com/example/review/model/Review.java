@@ -13,11 +13,13 @@ public class Review {
     private int id;
     private String name;
     private String rtext;
+    private int reviewScore;
 
-    public Review(int id, String name, String rtext) {
+    public Review(int id, String name, String rtext, int reviewScore) {
         this.id = id;
         this.name = name;
         this.rtext = rtext;
+        this.reviewScore = reviewScore;
     }
 
     public Review(String test, String testing) {
@@ -49,5 +51,13 @@ public class Review {
 
     public void setRtext(String rtext) {
         this.rtext = rtext;
+    }
+
+    public int getReviewScore() {
+        return reviewScore;
+    }
+
+    public void setReviewScore(int reviewScore) {
+        this.reviewScore= reviewScore;
     }
 }

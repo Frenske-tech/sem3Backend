@@ -24,7 +24,7 @@ class ReviewApplicationTests {
     }
     @Test
     void saveReview(){
-        this.repo.save(new Review(1, "test", "testing"));
+        this.repo.save(new Review(1, "test", "testing", 7));
         assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
     }
     @Test
@@ -32,6 +32,4 @@ class ReviewApplicationTests {
         this.repo.findAll();
         assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
     }
-
-
 }
