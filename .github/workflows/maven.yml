@@ -34,6 +34,6 @@ jobs:
         image: frenske12/springboot
         tags: latest
         registry: docker.io
-        dockerfile: /review/Dockerfile
+        dockerfile: ./review/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
