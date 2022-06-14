@@ -14,8 +14,13 @@
     <name>review</name>
     <description>review</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>11</java.version> 
+        <sonar.organization>frenske-tech</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
+    
+        
+      
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
