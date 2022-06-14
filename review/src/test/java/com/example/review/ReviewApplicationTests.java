@@ -5,8 +5,11 @@ import com.example.review.model.Review;
 import com.example.review.repository.ReviewRepo;
 import com.example.review.service.ReviewService;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.mockito.Mockito.verify;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
