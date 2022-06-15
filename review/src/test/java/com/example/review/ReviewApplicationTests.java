@@ -27,12 +27,19 @@ class ReviewApplicationTests {
     }
     @Test
     void saveReview(){
-        this.repo.save(new Review(1, "test", "testing", 7));
+        this.repo.save(new Review(1, "test", "testing", 4));
         assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
     }
     @Test
     void getReviews(){
         this.repo.findAll();
         assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
+    }
+    @Test
+    void DelReview(){
+        Review review = new Review(6, "test", "testing", 4);
+        this.repo.save(review);
+        this.repo.deleteAll();
+        assertThat(reviewcontroller.getAllReviews().size()).isZero();
     }
 }

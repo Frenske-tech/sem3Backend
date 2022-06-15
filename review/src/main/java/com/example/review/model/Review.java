@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
 public class Review {
@@ -22,9 +23,6 @@ public class Review {
         this.reviewScore = reviewScore;
     }
 
-    public Review(String test, String testing) {
-
-    }
     public Review(){
 
     }

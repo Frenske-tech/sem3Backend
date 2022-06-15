@@ -26,7 +26,9 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
+import org.springframework.test.web.servlet.ResultActions.*;
+
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.ResultActions;
@@ -55,7 +57,34 @@ public class IntegrationTest{
     }
 //    @Test
 //    void CreateReview() throws Exception{
+//        // given - precondition or setup
+//        Review review = new Review(1, "tessting", "test", 3);
 //
+//
+//        // when - action or behaviour that we are going test
+//        ResultActions response = mvc.perform(post("/review/add")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(objectMapper.writeValueAsString(review)));
+//
+//        // then - verify the result or output using assert statements
+//        response.andDo(print()).
+//                andExpect(status().isCreated())
+//                .andExpect(jsonPath("$.post",
+//                        is(review.getPost())))
+//                .andExpect(jsonPath("$.song",
+//                        is(review.getSong())))
+//                .andExpect(jsonPath("$.username",
+//                        is(post.getUsername())))
+//                .andExpect(jsonPath("$.userimage",
+//                        is(post.getUserimage())));
+//    }
+//    @Test
+//    void create() throws Exception{
+//        Review review = new Review(1, "testing", "test", 3);
+//        mvc.perform(post("/review/add/")
+//                .contentType(MediaType.ALL)
+//                .content(objectMapper.writeValueAsString(review))
+//        ).andExpect(status().isOk());
 //    }
 
 }

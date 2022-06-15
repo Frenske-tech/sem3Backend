@@ -18,7 +18,8 @@ public class ReviewController {
     @PostMapping("/add")
     public String add(@RequestBody Review review){
         reviewService.saveReview(review);
-        return "Review added";
+        return "Review added"+ review.getName();
+
     }
 
     @GetMapping("getall")
