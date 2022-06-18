@@ -15,12 +15,14 @@ public class Review {
     private String name;
     private String rtext;
     private int reviewScore;
+    private String username;
 
-    public Review(int id, String name, String rtext, int reviewScore) {
+    public Review(int id, String name, String rtext, int reviewScore, String username) {
         this.id = id;
         this.name = name;
         this.rtext = rtext;
         this.reviewScore = reviewScore;
+        this.username = username;
     }
 
     public Review(){
@@ -58,4 +60,11 @@ public class Review {
     public void setReviewScore(int reviewScore) {
         this.reviewScore= reviewScore;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {this.username = username;}
+
 }

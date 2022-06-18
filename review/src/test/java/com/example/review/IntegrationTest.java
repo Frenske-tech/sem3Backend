@@ -65,7 +65,7 @@ public class IntegrationTest{
 
     @Test
     void create() throws Exception{
-        Review review = new Review(1, "testing", "test", 3);
+        Review review = new Review(1, "testing", "test", 3, "frenske");
         mvc.perform(MockMvcRequestBuilders.post("/review/add/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(review))

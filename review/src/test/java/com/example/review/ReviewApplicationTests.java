@@ -27,7 +27,7 @@ class ReviewApplicationTests {
     }
     @Test
     void saveReview(){
-        this.repo.save(new Review(1, "test", "testing", 4));
+        this.repo.save(new Review(1, "test", "testing", 4, "frenske"));
         assertThat(reviewcontroller.getAllReviews().size()).isNotNull();
     }
     @Test
@@ -37,7 +37,7 @@ class ReviewApplicationTests {
     }
     @Test
     void DelReview(){
-        Review review = new Review(6, "test", "testing", 4);
+        Review review = new Review(6, "test", "testing", 4, "frenske");
         this.repo.save(review);
         this.repo.deleteAll();
         assertThat(reviewcontroller.getAllReviews().size()).isZero();
